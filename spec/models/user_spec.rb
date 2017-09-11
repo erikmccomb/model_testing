@@ -45,5 +45,4 @@ RSpec.describe User, type: :model do
     it 'returns false if sign_in_count == 0' do
       expect(@user.has_signed_in?).to eq(false)
     end
-  end
-end
+ end
