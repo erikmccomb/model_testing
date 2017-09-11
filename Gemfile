@@ -12,14 +12,15 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   # rspec-rails is the test framework 
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.6'
   gem 'faker'
 end
 
 # Added by user not a default section, specific for testing environment
 group :test do
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'database_cleaner'
+  gem 'simplecov' require: false
 end
 
 group :development do
