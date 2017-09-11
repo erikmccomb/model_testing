@@ -4,7 +4,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates_presence_of :first_name, :last_name
+
   def info
-    '#{self.email} has signed in: #{self.sign_in_count} times'
+    "#{email} has signed in: #{sign_in_count} times"
+  end
+
+  def full_name
+    "#{last_name}, #{first_name}"
+  end
+
+  def display_name
+    "#{first_name} #{last_name}"
   end
 end
