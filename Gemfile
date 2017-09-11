@@ -7,6 +7,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'
@@ -20,7 +21,7 @@ end
 group :test do
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'database_cleaner'
-  gem 'simplecov' require: false
+  gem 'simplecov'
 end
 
 group :development do
