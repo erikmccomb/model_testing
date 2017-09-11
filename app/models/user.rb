@@ -17,4 +17,8 @@ class User < ApplicationRecord
   def display_name
     "#{first_name} #{last_name}"
   end
+
+  def has_signed_in?
+    sign_in_count > 0
+  end
 end
